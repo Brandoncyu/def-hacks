@@ -14,10 +14,12 @@ class HomeownerHomePage extends Component {
 
   async componentDidMount(){
     let contractors = await this.getContractors()
-    console.log(contractors)
-    this.setState({
-      contractors
-    })
+
+    if (contractors) {
+        this.setState({
+        contractors
+      })
+    }
   }
 
   getContractors = async() =>{
@@ -50,7 +52,7 @@ class HomeownerHomePage extends Component {
                 <CardText>Main Contact: {contractor.firstname} {contractor.lastname}</CardText>
                 <CardText>Email: {contractor.email}</CardText>
                 <CardText>Services Offered:</CardText>
-                {contractor.services.map((service, value) => <CardText>{service} <Button color="primary" size="sm">Order Service</Button></CardText>)}
+                {contractor.services.map((service, value) => <CardText key={value}>{service} <Button color="primary" size="sm">Order Service</Button></CardText>)}
               </CardBody>
               </Card>)}
           </CardColumns>

@@ -26,7 +26,7 @@ class HomeownerSignin extends Component {
       state: '',
       zipcode: '',
       educationLevel: 'associate',
-      income: '',
+      income: 0,
       providedCreditRating: 'excellent',
       propertyStatus: 'rent',
       frequency: 'weekly',
@@ -37,6 +37,12 @@ class HomeownerSignin extends Component {
   changeValue = (e) =>{
     this.setState({
       [e.target.name]: e.target.value
+    })
+  }
+
+  changeNumber= (e) =>{
+    this.setState({
+      income: Number(e.target.value)
     })
   }
 
@@ -103,6 +109,7 @@ class HomeownerSignin extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <Container fluid={true}>
         <Row>
@@ -245,8 +252,8 @@ class HomeownerSignin extends Component {
                     </Col>
                     <Col>
                       <Label htmlFor="income">Annual Income</Label>
-                      <Input name="income" id="income" value={this.state.income}
-                      onChange={this.changeValue} />
+                      <Input name="number" id="income" value={this.state.income}
+                      onChange={this.changeNumber} />
                     </Col>
                   </Row>
                 </Container>
