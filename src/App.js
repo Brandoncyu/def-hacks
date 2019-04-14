@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios'
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import HomeownerSignin from './components/HomeownerSignin'
 import ContractorSignin from './components/ContractorSignin'
 import HomeownerHomePage from './components/HomeownerHomePage'

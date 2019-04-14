@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios'
 import {
   Button,
-  Form,
-  FormGroup,
-  Label,
   Container,
   Row,
   Col,
-  Input
 } from 'reactstrap'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class HomePage extends Component {
   render() {

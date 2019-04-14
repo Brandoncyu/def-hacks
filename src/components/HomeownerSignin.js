@@ -30,8 +30,7 @@ class HomeownerSignin extends Component {
       providedCreditRating: 'excellent',
       propertyStatus: 'rent',
       frequency: 'weekly',
-      ssn: '',
-      offers: []
+      ssn: ''
     }
   }
 
@@ -39,6 +38,12 @@ class HomeownerSignin extends Component {
     this.setState({
       [e.target.name]: e.target.value
     })
+  }
+
+  register = async () => {
+    console.log({...this.state})
+    let response = await axios.post('https://def-hacks-backend.herokuapp.com/registerHomeowner', {...this.state})
+    console.log(response)
   }
 
   getDate = async () => {
@@ -98,7 +103,6 @@ class HomeownerSignin extends Component {
   }
 
   render() {
-    console.log(this.state.offers)
     return (
       <Container fluid={true}>
         <Row>
@@ -106,7 +110,7 @@ class HomeownerSignin extends Component {
             <h1 id ="title">HomeFixLoans</h1>
           </Col>
           <Col>
-            <Form id="homeowner" id="forms">
+            <Form id="homeowner" className="forms">
               <FormGroup>
                 <Container>
                 <Row>
@@ -292,7 +296,7 @@ class HomeownerSignin extends Component {
                   </Row>
                 </Container>
               </FormGroup>
-              <Button onClick={this.getDate} color="primary" size="lg" > Submit</Button>
+              <Button onClick={this.register} color="primary" size="lg" > Submit</Button>
             </Form>
         </Col>
         <Col md="3"></Col>

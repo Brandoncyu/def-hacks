@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import {
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Container,
-  Row,
-  Col,
-  Input, Card,
-  CardImg, CardTitle, CardText, CardColumns,
- CardSubtitle, CardBody
+  Button, Container, Row, Col, Card, CardImg, CardTitle, CardText, CardColumns, CardSubtitle, CardBody
 } from 'reactstrap'
 
 class HomeownerHomePage extends Component {

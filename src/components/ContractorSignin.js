@@ -58,7 +58,7 @@ class ContractorSignin extends Component {
             <h1 id ="title">HomeFixLoans</h1>
           </Col>
           <Col>
-        <Form id="contractor" id="forms">
+        <Form id="contractor" className="forms">
           <FormGroup>
             <Container>
               <Row>
