@@ -140,7 +140,7 @@ class ContractorSignin extends Component {
           <FormGroup>
             <Container>
               <Label htmlFor="services">What Services Do You Provide?</Label>
-              <Input type="select" name="services" id="services" value={this.services} onChange={this.editServices} multiple multiple>
+              <Input type="select" name="services" id="services" value={this.services} onChange={this.editServices} multiple>
                 <option value="roofing">Roofing</option>
                 <option value="heating">Heating</option>
                 <option value="plumbing">Plumbing</option>
