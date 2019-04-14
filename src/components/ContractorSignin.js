@@ -137,7 +137,7 @@ class ContractorSignin extends Component {
             <Container>
               <Row>
                 <Col>
-                  <Label htmlFor="description">Text Area</Label>
+                  <Label htmlFor="description">Company Description</Label>
                   <Input type="textarea" name="description" id="description" value={this.state.description} onChange={this.changeValue} />
                 </Col>
               </Row>
