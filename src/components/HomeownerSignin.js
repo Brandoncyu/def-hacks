@@ -100,7 +100,7 @@ class HomeownerSignin extends Component {
   render() {
     console.log(this.state.offers)
     return (
-      <div className="App">
+
         <Form id="homeowner">
           <FormGroup>
             <Container>
@@ -287,9 +287,9 @@ class HomeownerSignin extends Component {
               </Row>
             </Container>
           </FormGroup>
+          <Button onClick={this.getDate}> Submit</Button>
         </Form>
-        <Button onClick={this.getDate}> Submit</Button>
-      </div>
+        
     );
   }
 }
