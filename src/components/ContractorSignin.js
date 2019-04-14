@@ -48,7 +48,13 @@ class ContractorSignin extends Component {
   render() {
     console.log(this.state)
     return (
-        <Form id="contractor">
+      <Container fluid={true}>
+        <Row>
+          <Col md="3">
+            <h1 id ="title">HomeFixLoans</h1>
+          </Col>
+          <Col>
+        <Form id="contractor" id="forms">
           <FormGroup>
             <Container>
               <Row>
@@ -147,9 +153,12 @@ class ContractorSignin extends Component {
               </Input>
             </Container>
           </FormGroup>
-          <Button> Submit</Button>
+          <Button color="primary" size="lg" > Submit</Button>
         </Form>
-
+        </Col>
+        <Col md="3"></Col>
+        </Row>
+        </Container>
     );
   }
 }
