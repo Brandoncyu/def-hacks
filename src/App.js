@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import HomeownerSignin from './components/HomeownerSignin'
 import ContractorSignin from './components/ContractorSignin'
+import HomeownerHomePage from './components/HomeownerHomePage'
 import HomePage from './components/HomePage'
 
 class App extends Component {
@@ -12,6 +13,9 @@ class App extends Component {
       <Switch>
         <Route exact path="/homeowner" render={()=>{
             return <HomeownerSignin />
+        }} />
+        <Route exact path="/homeowner/home" render={()=>{
+            return <HomeownerHomePage />
         }} />
         <Route exact path="/contractor" render={()=>{
             return <ContractorSignin />

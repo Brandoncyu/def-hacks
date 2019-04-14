@@ -45,8 +45,12 @@ class ContractorSignin extends Component {
     })
   }
 
+  registerContractor = async () => {
+    let response = await axios.post('https://def-hacks-backend.herokuapp.com/registerContractor', {...this.state})
+    console.log(response)
+  }
+
   render() {
-    console.log(this.state)
     return (
       <Container fluid={true}>
         <Row>
@@ -147,13 +151,13 @@ class ContractorSignin extends Component {
             <Container>
               <Label htmlFor="services">What Services Do You Provide?</Label>
               <Input type="select" name="services" id="services" value={this.services} onChange={this.editServices} multiple>
-                <option value="roofing">Roofing</option>
-                <option value="heating">Heating</option>
-                <option value="plumbing">Plumbing</option>
+                <option value="Roofing">Roofing</option>
+                <option value="Heating">Heating</option>
+                <option value="Plumbing">Plumbing</option>
               </Input>
             </Container>
           </FormGroup>
-          <Button color="primary" size="lg" > Submit</Button>
+          <Button color="primary" size="lg" onClick={this.registerContractor}> Submit</Button>
         </Form>
         </Col>
         <Col md="3"></Col>
